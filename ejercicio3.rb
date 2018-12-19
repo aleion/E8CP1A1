@@ -1,9 +1,18 @@
-def metodo_uno 
-    file = File.open('peliculas.txt', 'r')
-    line = file.split(/[[:space:º]]/)
-    line.reject(&empty?)
-    line.size
-    print file
+def metodo_uno(file_input) 
+  file = File.open(file_input, 'r')
+  line = file.read
+  lineas = line.split(" ")
+  puts lineas.size
 end
 
-metodo_uno
+def metodo_dos(file_input, string) 
+  file = File.open(file_input, 'r')
+  line = file.read
+  lineas = line.split(" ")
+  puts lineas.count(string)
+end
+
+metodo_uno('peliculas.txt')
+metodo_dos('peliculas.txt', 'El')
+
+#listo
