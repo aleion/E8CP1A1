@@ -18,7 +18,7 @@ def create_hash_prod
     end
     prod_array
   end
-
+  
 def sum_stock(stocks)
     sum = stocks.inject(0) do |acum, item|
         if item == 'NR'
